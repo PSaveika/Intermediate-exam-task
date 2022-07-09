@@ -1,0 +1,566 @@
+// @import "variables";
+// @import "mixins";
+// @import "general";
+// @import "images";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+}
+
+.top-nav {
+    display: flex;
+    position: fixed;
+    background: #f8f9fa;
+    height: 70px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;  
+
+    .btn-main {
+        background: transparent;
+        color: #212529;
+        border: none;
+        font-size: 1.7em;
+    }
+
+    .btn-signin {
+        background: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 5px;
+        font-size: 1.3em;
+    }
+}
+
+.container {
+
+    header {
+        display: flex;
+        position: relative;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h1 {
+            position: relative;
+            color: #ffffff;
+            text-align: center; 
+            margin: 0 1rem;
+        }
+
+        form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 5rem 1rem 0 1rem;
+
+            input {
+                height: 3.5rem;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: .7rem;
+                font-size: 1.4em;
+            }
+
+            input:first-child {
+                background: #ffffff;
+                color: #6c757d;
+                padding-left: 1.2rem;
+            }
+
+            input:last-child{
+                background: #007bff;
+                color: #ffffff; 
+            }
+        }
+    }
+    
+    header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("../img/bg-masthead.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        filter: brightness(0.7);
+    }
+
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        background: #f8f9fa;
+        padding: 8rem 1rem 0 1rem;
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 5rem;
+
+            li {
+                list-style: none;
+                color: #007bff;
+                padding-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 2em;
+                color: #212529;
+                padding-bottom: .5rem;
+            }
+
+            p {
+                font-size: 1.3em;
+                line-height: 1.5em;
+                color: #6c757d;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .showcase {
+        width: 100%;
+
+        .flex-wrap {
+            display: flex;
+            flex-direction: column;
+
+            .showcase-text {
+                margin: 4.2rem;
+    
+                h3 {
+                    color: #212529;
+                    font-size: 2.4em;
+                    margin-bottom: .8rem;
+                }
+    
+                p {
+                    font-size: 1.5em;
+                    line-height: 1.5em;
+                    font-weight: 300;
+                    color: #6c757d;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                object-position: left;
+            }
+
+            div:nth-of-type(1) {
+                order: 2;
+            }
+            div:nth-of-type(2) {
+                order: 1;
+            }
+            div:nth-of-type(3) {
+                order: 3;
+            }
+            div:nth-of-type(4) {
+                order: 4;
+            }
+            div:nth-of-type(5) {
+                order: 6;
+            }
+            div:nth-of-type(6) {
+                order: 5;
+            }
+        }
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        background: #f8f9fa;
+        align-items: center;
+        text-align: center;
+        padding: 8rem 0;
+
+        h3 {
+            font-size: 2.5em;
+            color: #212529;
+            margin-bottom: 4rem ;
+        }
+
+        .card-wrap {
+            
+    
+            .card {
+                margin-bottom: 4rem;
+        
+                img {
+                    width: 250px;
+                    border-radius: 50%;
+                    box-shadow: 0 .4rem .5rem #afb7be;
+                    margin-bottom: 1.2rem;
+                }
+        
+                h4 {
+                    color: #212529;
+                    font-size: 1.5em;
+                    margin-bottom: 1rem;
+                }
+    
+                p {
+                    color: #6c757d;
+                    font-size: 1.3em;
+                    font-weight: 300;
+                    line-height: 1.6em;
+                    padding: 0 1rem;
+                }
+            }
+        } 
+    }
+
+    .newsletter {
+        display: flex;
+        position: relative;
+        height: 600px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h3 {
+            position: relative;
+            color: #ffffff;
+            text-align: center; 
+            font-size: 2.5em;
+            margin: 0 1rem;
+        }
+
+        form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 0 1rem;
+
+            input {
+                height: 3.5rem;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: .7rem;
+                font-size: 1.4em;
+            }
+
+            input:first-child {
+                background: #ffffff;
+                color: #6c757d;
+                padding-left: 1.2rem;
+            }
+
+            input:last-child{
+                background: #007bff;
+                color: #ffffff; 
+            }
+        }
+    }
+    
+    .newsletter::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("../img/bg-masthead.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        filter: brightness(0.7);
+    }
+
+    footer {
+        background: #f8f9fa;
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+
+            nav {
+                
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 5rem 0 1rem 0;
+
+                    li {
+                        list-style-type: none;
+                        color: #007bff;
+                        font-size: 1.25em;
+                        position: relative;
+                        margin: 0 1rem;
+                    }
+
+                    li::after {
+                        content: "•";
+                        position: absolute;
+                        color: #6c757d;
+                        font-size: .5rem;
+                        margin: .5rem 1rem;
+                    }
+
+                    li:last-child::after {
+                        content: "";
+                        display: none;
+                    }
+                }
+            }
+
+            p {
+                text-align: center;
+                color: #6c757d;
+            }
+        }
+
+
+        .footer-icons {
+
+            ul {
+                display: flex;
+                justify-content: center;
+                list-style-type: none;
+                padding: 2rem 0 5rem 0;
+                
+
+                li {
+                    
+                    a {
+                        color: #007bff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 61rem) {
+
+    .container {
+
+        header {
+
+            .clear-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 55%;
+    
+                h1 {
+                    font-size: 4em;
+                }
+        
+                form {
+                    flex-direction: row;
+                    width: 70%;
+                    gap: 1rem;
+        
+                    input:first-child {
+                        flex: 70%;
+                    }
+        
+                    input:last-child{
+                        flex: 30%;
+                    }
+                }
+            }
+        }
+
+        .features {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 8rem;
+            gap: 1.5rem;
+    
+            .feature {
+                margin: 8rem 0;
+                padding: 0 1rem;
+    
+                
+    
+                h3 {
+                    font-size: 2.2em;
+                }
+    
+                p {
+                    font-size: 1.6em;
+                }
+            }
+        }
+
+
+        .showcase {
+            .flex-wrap {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+    
+                .showcase-text {
+                    margin: 0;
+                    padding: 0 8rem;
+        
+                    h3 {
+                        font-size: 2.6em;
+                    }
+        
+                    p {
+                        font-size: 1.6em;
+                    }
+                }
+
+                div {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                div:nth-of-type(1) {
+                    order: 1;
+                }
+                div:nth-of-type(2) {
+                    order: 2;
+                }
+                div:nth-of-type(3) {
+                    order: 3;
+                }
+                div:nth-of-type(4) {
+                    order: 4;
+                }
+                div:nth-of-type(5) {
+                    order: 5;
+                }
+                div:nth-of-type(6) {
+                    order: 6;
+                }
+            }
+        }
+
+
+        .testimonials {
+    
+            h3 {
+                font-size: 2.5em;
+                color: #212529;
+                margin-bottom:4rem ;
+            }
+    
+            .card-wrap {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+                .card {
+                    margin-bottom: 0;
+                    flex-basis: 25%;
+                }
+            }
+        }
+
+
+        .newsletter {
+            height: 500px;
+            
+            h3 {
+                font-size: 3em;
+            }
+    
+            form {
+                flex-direction: row;
+                width: 55%;
+                gap: 1rem;
+    
+                input:first-child {
+                    flex: 75%;
+                }
+    
+                input:last-child{
+                    flex: 25%;
+                }
+            }
+        }
+
+
+
+
+        footer {
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5rem 0;
+    
+            .footer-left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+    
+                nav {
+                    
+                    ul {
+                        margin: 0;
+
+                        li:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+    
+                p {
+                    margin-top: 1rem;
+                }
+            }
+    
+    
+            .footer-icons {
+    
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    list-style-type: none;
+                    padding: 0;
+                    
+    
+                    li {
+                        
+                        a {
+                            color: #007bff;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+        
+    
+}

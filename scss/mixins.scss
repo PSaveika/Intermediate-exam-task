@@ -1,0 +1,12 @@
+//MIXIN
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+@mixin img-style {
+    object-fit: cover;
+    background-position: center center;
+}
