@@ -1,5 +1,6 @@
 footer {
     background: $background-secondary;
+    overflow: hidden;
 
     .footer-left {
         display: flex;
@@ -123,5 +124,38 @@ footer {
                 }
             }
         }
+    }
+}
+
+
+
+.footer-slideLeft {
+    opacity: 0;
+    animation: footerSlideLeft 1s ease forwards;
+}
+
+@keyframes footerSlideLeft {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.footer-slideRight {
+    opacity: 0;
+    animation: footerSlideRight 1s ease forwards;
+}
+
+@keyframes footerSlideRight {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

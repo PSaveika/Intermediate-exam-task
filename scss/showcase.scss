@@ -1,5 +1,6 @@
 .showcase {
     width: 100%;
+    overflow: hidden;
 
     .flex-wrap {
         display: flex;
@@ -97,5 +98,37 @@
                 order: 6;
             }
         }
+    }
+}
+
+
+
+.showcase-slideLeft {
+    opacity: 0;
+    animation: sSlideLeft 1.5s ease forwards;
+}
+
+@keyframes sSlideLeft {
+    0% {
+        transform: translateX(-50vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.showcase-slideRight {
+    opacity: 0;
+    animation: sSlideRight 1.5s ease forwards;
+}
+
+@keyframes sSlideRight {
+    0% {
+        transform: translateX(50vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

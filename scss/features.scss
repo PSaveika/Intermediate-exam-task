@@ -3,6 +3,7 @@
     flex-direction: column;
     background: $background-secondary;
     padding: 8rem 1rem 0 1rem;
+    overflow: hidden;
 
     .feature {
         display: flex;
@@ -33,6 +34,8 @@
     }
 }
 
+
+
 @media (min-width: 61rem) {
 
     .features {
@@ -56,5 +59,55 @@
                 font-size: 1.6em;
             }
         }
+    }
+}
+
+
+
+  
+
+
+.feature-slideLeft {
+    opacity: 0;
+    animation: fSlideLeft 1.5s ease forwards;
+}
+
+@keyframes fSlideLeft {
+    0% {
+        transform: translateX(-25vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.feature-slideCenter{
+    opacity: 0;
+    animation: fSlideCenter 1.5s ease forwards;
+}
+
+@keyframes fSlideCenter {
+    0% {
+        transform: translateY(25vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-slideRight {
+    opacity: 0;
+    animation: fSlideRight 1.5s ease forwards;
+}
+
+@keyframes fSlideRight {
+    0% {
+        transform: translateX(25vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
